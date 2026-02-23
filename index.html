@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Big Little Week</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f7f7fb;
+    }
+    nav {
+      background: #6a0dad;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    nav button {
+      background: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    nav button:hover {
+      background: #e6d9ff;
+    }
+    .page {
+      display: none;
+      padding: 40px;
+      text-align: center;
+    }
+    .active {
+      display: block;
+    }
+    h1 {
+      color: #6a0dad;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('day1')">Day 1</button>
+    <button onclick="showPage('day2')">Day 2</button>
+    <button onclick="showPage('day3')">Day 3</button>
+    <button onclick="showPage('day4')">Day 4</button>
+    <button onclick="showPage('day5')">Day 5</button>
+    <button onclick="showPage('godbigs')">Letters from Your God Bigs</button>
+    <button onclick="showPage('big')">Letter from Your Big</button>
+  </nav>
+
+  <div id="home" class="page active">
+    <h1>Welcome to Big Little Week </h1>
+    <p>Click the tabs above to open each day and your letters!</p>
+  </div>
+
+  <div id="day1" class="page">
+    <h1>Day 1</h1>
+    <p>Add your Day 1 surprise details here!</p>
+  </div>
+
+  <div id="day2" class="page">
+    <h1>Day 2</h1>
+    <p>Add your Day 2 surprise details here!</p>
+  </div>
+
+  <div id="day3" class="page">
+    <h1>Day 3</h1>
+    <p>Add your Day 3 surprise details here!</p>
+  </div>
+
+  <div id="day4" class="page">
+    <h1>Day 4</h1>
+    <p>Add your Day 4 surprise details here!</p>
+  </div>
+
+  <div id="day5" class="page">
+    <h1>Day 5</h1>
+    <p>Add your Day 5 surprise details here!</p>
+  </div>
+
+  <div id="godbigs" class="page">
+    <h1>Letters from Your God Bigs 💌</h1>
+    <p>Paste your god big letters here.</p>
+  </div>
+
+  <div id="big" class="page">
+    <h1>Letter from Your Big </h1>
+    <p>Paste your big's letter here.</p>
+  </div>
+
+  <script>
+    function showPage(pageId) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
